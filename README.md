@@ -43,48 +43,44 @@ Create a new schema in your MySQL instance:
 
 ```sql
 CREATE DATABASE minicrm;
+1. Backend Setup
+Navigate to the server directory and install dependencies:
 
-### 2. Backend Setup
-bash
 cd server
 npm install
-### Create a .env file in the server/ directory:
+Configure your .env file in server/ with your database credentials:
 
-env
 DB_NAME=minicrm
-DB_USER=your_username
-DB_PASSWORD=your_password
+DB_USER=your_mysql_username
+DB_PASSWORD=your_mysql_password
 DB_HOST=localhost
-JWT_SECRET=your_super_secret_key
+JWT_SECRET=your_secret_key
 PORT=5000
-Start the server:
+Start the backend server:
 
-bash
 npm run dev
-3. Frontend Setup
-bash
+Server runs on http://localhost:5000
+
+2. Frontend Setup
+Navigate to the client directory and install dependencies:
+
 cd client
 npm install
+Start the frontend application:
+
 npm run dev
-The application will be live at: http://localhost:5173
+Client runs on http://localhost:5173
 
 📖 Usage Guide
-Authentication
-Register an admin account and log in to access the protected dashboard.
-
-Dashboard Overview
-View high-level metrics of all active leads at a glance.
-
-Lead Lifecycle
-Action	Description
-Add	Manually input new leads via the "New Lead" modal
-Status Update	Use intuitive dropdowns to move leads through the pipeline
-Detailed View	Click the eye icon to open the side panel for notes and history
-Delete	Remove leads from the system when no longer needed
-
+Register/Login: Access /login to create an admin account or log in.
+Dashboard: View the summary of your leads (New, Contacted, Converted).
+Manage Leads:
+Add: Use the "New Lead" button.
+Update: Change status directly from the dropdown.
+Details: Click the eye icon to view details, add notes, and set follow-ups.
+Delete: Remove leads from the system.
+🤝 Contributing
 ## 🤝 Contributing
-
 Feel free to fork this project and submit a pull request!
-
-## 📄 License
+📄 License
 This project is open source and available under the MIT License."# FUTURE_FS_02" 
